@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.factcast.rest.jersey</groupId>
 	<artifactId>factcast-rest-jersey</artifactId>
-	<version>0.0.11-SNAPSHOT</version>
+	<version>0.0.11</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
   <artifactId>factcast-server-rest-jersey</artifactId>
@@ -70,18 +70,18 @@
     <dependency>
       <groupId>org.factcast</groupId>
       <artifactId>factcast-store-inmem</artifactId>
-      <version>${project.version}</version>
+      <version>${factcast.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.factcast</groupId>
       <artifactId>factcast-core</artifactId>
-      <version>${project.version}</version>
+      <version>${factcast.version}</version>
     </dependency>
     <dependency>
       <groupId>org.factcast</groupId>
       <artifactId>factcast-core</artifactId>
-      <version>${project.version}</version>
+      <version>${factcast.version}</version>
       <scope>test</scope>
       <type>test-jar</type>
     </dependency>
