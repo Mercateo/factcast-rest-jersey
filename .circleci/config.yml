@@ -52,5 +52,6 @@ jobs:
       # run tests!
       - run: 
           name: FullTest
-          command: mvn -B clean install verify jacoco:report coveralls:report -DrepoToken=vjYKlpLcJdaVfbCnGi3gRp4f9dU89hpnm -Dpg_url=$pg_url
+#          command: mvn -B clean install verify jacoco:report coveralls:report -DrepoToken=vjYKlpLcJdaVfbCnGi3gRp4f9dU89hpnm -Dpg_url=$pg_url
+           command: mvn -B clean install verify -Dpg_url=$pg_url
       
