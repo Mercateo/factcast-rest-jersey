@@ -1,0 +1,16 @@
+.project
+.settings
+*~
+.classpath
+.factorypath
+target
+
+.idea
+*.iml
+
+**/bin/*
+*.versionsBackup*
+test_local.sh
+/.metadata/
+.recommenders
+**/dependency-reduced*
