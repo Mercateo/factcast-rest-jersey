@@ -26,22 +26,12 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
+      # run tests!
       - run: 
-          name: Quick install
-          command: mvn -B -DskipTests -DskipITs install
-
+          name: FullTest
+          command: mvn -B install verify jacoco:report coveralls:report -DrepoToken=vjYKlpLcJdaVfbCnGi3gRp4f9dU89hpnm  
+      
       - save_cache:
           paths:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
-
-      - run:
-          name: Wait for DB
-          command: dockerize -wait tcp://localhost:5432 -timeout 1m
-
-        
-      # run tests!
-      - run: 
-          name: FullTest
-          command: mvn -B verify jacoco:report coveralls:report -DrepoToken=vjYKlpLcJdaVfbCnGi3gRp4f9dU89hpnm  
-      
