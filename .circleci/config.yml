@@ -52,5 +52,5 @@ jobs:
       # run tests!
       - run: 
           name: FullTest
-           command: mvn -B clean install verify -Dpg_url=$pg_url
+          command: mvn -B clean install verify -Dpg_url=$pg_url
       
